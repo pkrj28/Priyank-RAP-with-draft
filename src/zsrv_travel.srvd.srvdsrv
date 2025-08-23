@@ -1,0 +1,12 @@
+@EndUserText.label: 'SERVICE'
+define service ZSRV_TRAVEL {
+  expose ZATS_PJ_TRAVEL_PROCESSOR    as Travel;
+  expose ZATS_PJ_BOOKING_PROCESSOR   as Booking;
+  expose ZATS_PJ_BOOKSUPPL_PROCESSOR as BookSupplement;
+  expose /DMO/I_Agency               as Agency;
+  expose /DMO/I_Customer             as Customer;
+  expose /DMO/I_Carrier              as Carrier;
+  expose /DMO/I_Connection           as Connection;
+  expose /DMO/I_Overall_Status_VH    as OverallStatus;
+  expose /DMO/I_Booking_Status_VH    as BookingStatus;
+}
