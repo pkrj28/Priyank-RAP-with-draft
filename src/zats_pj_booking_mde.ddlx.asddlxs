@@ -14,14 +14,14 @@ annotate view ZATS_PJ_BOOKING_PROCESSOR
                     type: #IDENTIFICATION_REFERENCE,
                     label: 'Booking Info',
                     position: 10
+                 },
+                 { 
+                    purpose: #STANDARD,
+                    type: #LINEITEM_REFERENCE,
+                    position: 20,
+                    label: 'Supplements',
+                    targetElement: '_BookingSupplement'
                  }
-//                 { 
-//                    purpose: #STANDARD,
-//                    type: #LINEITEM_REFERENCE,
-//                    position: 20,
-//                    label: 'Supplements',
-//                    targetElement: '_BookingSupplement'
-//                 }
     ]
     @UI.lineItem: [{ position: 10 }]
     @UI.identification: [{ position: 10 }]

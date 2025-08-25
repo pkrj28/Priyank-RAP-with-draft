@@ -1,0 +1,5 @@
+CLASS zbp_ats_pj_boosuppl DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zats_pj_travel.
+ENDCLASS.
+
+CLASS zbp_ats_pj_boosuppl IMPLEMENTATION.
+ENDCLASS.

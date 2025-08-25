@@ -1,0 +1,33 @@
+projection;
+strict ( 2 );
+use draft;
+define behavior for ZATS_PJ_TRAVEL_PROCESSOR alias Travel
+{
+  use create;
+  use update;
+  use delete;
+  use action Activate;
+  use action Discard;
+  use action Edit;
+  use action Prepare;
+  use action Resume;
+  use association _Booking { create; with draft;}
+}
+
+define behavior for ZATS_PJ_BOOKING_PROCESSOR alias Booking
+{
+  use update;
+  use delete;
+
+  use association _Travel {with draft;}
+  use association _BookingSupplement { create; with draft;}
+}
+
+define behavior for ZATS_PJ_BOOKSUPPL_PROCESSOR alias BookingSuppl
+{
+  use update;
+  use delete;
+
+  use association _Travel{with draft;}
+  use association _Booking{with draft;}
+}
